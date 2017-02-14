@@ -172,15 +172,16 @@
    </script>
    <script type="text/javascript">
       $(function() {
-          $('#switch').click(function() {
-              $('#switch1').animate({left:$("#switch2").offset().left}); 
-      		$('#info1').animate({left:$("#info2").offset().left});
-              $('#switch2').animate({right:$("#switch2").offset().left});
-      		$('#info2').animate({right:$("#info2").offset().left}, function() {
-      			$('#switch1').animate({left:$("#switch2").offset().left}); 
-              	$('#switch2').animate({right:$("#switch2").offset().left});
-      		});  
-          });
+         $('#switch').click(function() {
+            $('#switch1').animate({left:$("#switch2").offset().left}); 
+            $('#info1').animate({left:$("#info2").offset().left});
+            $('#switch2').animate({right:$("#switch2").offset().left});
+            $('#info2').animate({right:$("#info2").offset().left}, function() {
+               //We wait for the first switch to finish until we switch back
+               $('#switch1').animate({left:$("#switch2").offset().left}); 
+               $('#switch2').animate({right:$("#switch2").offset().left});
+            });  
+         });
       });
    </script>
 </html>
