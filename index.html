@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width initial-scale=1" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="A tool to convert GroupManager Permission Configs to Pex and reverse">
+      <meta property="og:title" content="Convert Permission files" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://api.epticmc.com/gm-to-pex" />
+      <meta property="og:image" content="https://nulldev.org/img/favicon.png" />
+      <meta property="og:description" content="This tool helps you to convert Groupmanager Permissions to Pex" />
+      <title>Pex & Groupmanager Converter | NullDev</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="icon" href="https://nulldev.org/img/favicon.png" type="image/png"/>
+      <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script src="js/main.js"></script>
+   </head>
+   <body>
+      <div id="warnempty" class="modal">
+         <div class="modal-content">
+            <div class="modal-header">
+               <span class="close">&times;</span>
+               <h2 style="line-height: 50px !important;">
+                  <span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
+                  &nbsp;&nbsp;Error...&nbsp;&nbsp;
+                  <span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
+                  <br>
+               </h2>
+            </div>
+            <div class="modal-body">
+               <br>
+               <p>The Input box most not be empty.</p>
+               <p>Please paste a valid config!</p>
+               <br>
+            </div>
+            <div class="modal-footer">
+               <h3>NullDev</h3>
+            </div>
+         </div>
+      </div>
+      <div id="header">
+         <br>
+         <h1 style="color:#FFFFFF;" id="title-l">Groupmanager to Pex Converter</h1>
+         <br>
+      </div>
+      <div id="body">
+         <h1>Permissions Converter</h1>
+         <div class="description">
+            This tool will convert Groupmanager Permission Configs to Pex Permission Configs and reverse.
+         </div>
+         <div id="fields">
+            <div class="row">
+               <div class="col-md-5">
+                  <div class="input">
+                     <div style="position: relative;" id="info1">
+                        <h4>GroupManager (<i>GM</i>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
+                           <span class="label label-info" style="display:inline !important;">groups.yml</span>
+                        </h4>
+                        <hr style="border: 0; border-bottom: 1px dashed #ccc; background: #999;">
+                     </div>
+                     <div style="position: relative;" id="switch1">
+                        <textarea id="input" placeholder="Input"></textarea>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-2">
+                  <div id="middle-col">
+                     <div style="position: relative; top: 50%; transform: translateY(-50%);">
+                        <br><br><br><br><br><br>
+                        <hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
+                        <input id="convert" type="button" onclick="convertSend();" value="Convert" class="btn btn-default">
+                        <br>
+                        <h4>
+                           <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
+                           &nbsp;&nbsp;&nbsp;
+                           <p style="display:inline;" id="w-t-w">GM TO PEX</p>
+                           &nbsp;&nbsp;&nbsp;
+                           <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                        </h4>
+                        <p>GroupManager to PermissionsEx</p>
+                        <br>
+                        <hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
+                        <input id="switch" type="button" value="Switch" onclick="switchSend();" class="btn btn-default">
+                        <br>
+                        <h4>
+                           <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
+                           &nbsp;&nbsp;&nbsp;SWITCH&nbsp;&nbsp;&nbsp;
+                           <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
+                        </h4>
+                        <p id="s-t-f">Switch the fields to "PEX to GM"</p>
+                        <br>
+                        <hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="output">
+                     <div style="position: relative;" id="info2">
+                        <h4>PermissionsEx (<i>Pex</i>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
+                           <span class="label label-info" style="display:inline !important;">permissions.yml</span>
+                        </h4>
+                        <hr style="border: 0; border-bottom: 1px dashed #ccc; background: #999;">
+                     </div>
+                     <div style="position: relative;" id="switch2">
+                        <textarea id="output" placeholder="Output" readonly></textarea>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="footer">
+         <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+         Copyright &copy; 2017 <a href="https://nulldev.org" target="_blank">NullDev.org</a> & <a href="https://epticmc.com" target="_blank">EpticMC.com</a>
+      </div>
+   </body>
+   <script type="text/javascript">
+      var modal = document.getElementById('warnempty');
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      function switchSend(){
+      	var saveTmp = document.getElementById("input").value;
+      	fswitch(saveTmp);
+      }
+      function convertSend(){
+      	//Animate
+      	var toConv = document.getElementById("input").value;
+      	if (toConv == null || toConv == '' || toConv.replace(/\s/g,'') == '') modal.style.display = "block";
+      	else fconvert(toConv);
+      }
+   </script>
+   <script type="text/javascript">
+      $(function() {
+        $('#switch').click(function() {
+          $('#switch1').animate({left:$("#switch2").offset().left}); 
+      		$('#info1').animate({left:$("#info2").offset().left});
+          $('#switch2').animate({right:$("#switch2").offset().left});
+      		$('#info2').animate({right:$("#info2").offset().left}, function() {
+      	    $('#switch1').animate({left:$("#switch2").offset().left}); 
+            $('#switch2').animate({right:$("#switch2").offset().left});
+      		});
+        });
+      });
+  </script>
+</html>
