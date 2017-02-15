@@ -1,10 +1,11 @@
 var gm2pex = true;
-function fswitch(tmp){
+function fswitch(){
 	div1  = $('#info1');
 	div2  = $('#info2');
 	cdiv1 = div1.clone();
 	cdiv2 = div2.clone();
 	gm2pex = !gm2pex;
+
 	if (gm2pex == true){
 		//document.getElementById('s-t-f').innerHTML = "Switch the fields to \"PEX to GM\"";
 		//document.getElementById('w-t-w').innerHTML = "GM TO PEX";
