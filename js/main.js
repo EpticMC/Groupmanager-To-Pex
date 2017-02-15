@@ -62,9 +62,9 @@ function selOut(){
 }
 function copIn(){
 	$("#input").select();
-    document.execCommand('copy');
+	document.execCommand('copy');
 }
 unction copOut(){
 	$("#output").select();
-    document.execCommand('copy');
+    	document.execCommand('copy');
 }
