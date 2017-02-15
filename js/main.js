@@ -1,4 +1,9 @@
 var gm2pex = true;
+function convertSend(){
+	var toConv = document.getElementById("input").value;
+	if (toConv == null || toConv.replace(/\s/g,'') == '') modal1.style.display = "block";
+	else fconvert(toConv);
+}
 function fswitch(){
 	div1  = $('#info1');
 	div2  = $('#info2');
