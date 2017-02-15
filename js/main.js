@@ -11,6 +11,9 @@ function fswitch(tmp){
 		$("#s-t-f").fadeOut("fast", function(){
   			$("#s-t-f").html("Switch the fields to \"PEX to GM\"").fadeIn("fast");
 		});
+		$("#desc1").fadeOut("fast", function(){
+  			$("#desc1").html("GroupManager to PermissionsEx").fadeIn("fast");
+		});
 		$("#w-t-w").fadeOut("fast", function(){
   			$("#w-t-w").html("GM TO PEX").fadeIn("fast");
 		});
@@ -25,6 +28,9 @@ function fswitch(tmp){
 		//document.getElementById('w-t-w').innerHTML = "PEX TO GM";
 		$("#s-t-f").fadeOut("fast", function(){
   			$("#s-t-f").html("Switch the fields to \"GM to PEX\"").fadeIn("fast");
+		});
+		$("#desc1").fadeOut("fast", function(){
+  			$("#desc1").html("PermissionsEx to GroupManager").fadeIn("fast");
 		});
 		$("#w-t-w").fadeOut("fast", function(){
   			$("#w-t-w").html("PEX TO GM").fadeIn("fast");
