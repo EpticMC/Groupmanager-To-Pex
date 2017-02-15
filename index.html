@@ -207,45 +207,25 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		var modal1 = document.getElementById('warnempty');
-		var modal2 = document.getElementById('warnmobil');
-		var modal3 = document.getElementById('warnstart');
-		var span  = document.getElementsByClassName("close")[0];
-		var span1 = document.getElementById('close1');
-		var span2 = document.getElementById('close2');
+		var modal1 = document.getElementById('warnempty'), modal2 = document.getElementById('warnmobil'), modal3 = document.getElementById('warnstart'),
+		    span   = document.getElementsByClassName("close")[0], span1 = document.getElementById('close1'), span2 = document.getElementById('close2');
 		if(window.innerWidth <= 800 && window.innerHeight <= 600) modal2.style.display = "block";
 		else modal3.style.display = "block";
-		span.onclick = function() {
-			modal1.style.display = "none";
-		}
-		span1.onclick = function() {
-			modal2.style.display = "none";
-		}
-		span2.onclick = function() {
-			modal3.style.display = "none";
-		}
+		span.onclick  = function() { modal1.style.display = "none"; }
+		span1.onclick = function() { modal2.style.display = "none"; }
+		span2.onclick = function() { modal3.style.display = "none"; }
 		window.onclick = function(event) {
 			if (event.target == modal1) modal1.style.display = "none";
 			if (event.target == modal2) modal2.style.display = "none";
 			if (event.target == modal3) modal3.style.display = "none";
 		}
-		function convertSend(){
-			var toConv = document.getElementById("input").value;
-			if (toConv == null || toConv.replace(/\s/g,'') == '') modal1.style.display = "block";
-			else fconvert(toConv);
-		}
-	</script>
-	<script type="text/javascript">
 		$(function() {
 			$('#switch').click(function() {
-				var inBak  = document.getElementById("input").value,
-				    outBak = document.getElementById("output").value;
+				var inBak  = document.getElementById("input").value, outBak = document.getElementById("output").value;
 				document.getElementById("input").value = ' ';
 				document.getElementById("output").value = ' ';
 				$('#switch1').animate({left:$("#switch2").offset().left}); 
-				//$('#info1').animate({left:$("#info2").offset().left});
 				$('#switch2').animate({right:$("#switch2").offset().left}, function() {
-					//$('#info2').animate({right:$("#info2").offset().left}, function() {
 					$('#switch1').animate({left:$("#switch2").offset().left}); 
 					$('#switch2').animate({right:$("#switch2").offset().left}, function() {
 						document.getElementById("input").value = inBak;
