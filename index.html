@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -164,7 +165,7 @@
 								<p id="desc1">GroupManager to PermissionsEx</p>
 								<br>
 								<hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
-								<input id="switch" type="button" value="Switch" onclick="switchSend();" class="btn btn-default">
+								<input id="switch" type="button" value="Switch" onclick="fswitch();" class="btn btn-default">
 								<br>
 								<h4 style="overflow: hidden; white-space: nowrap;">
 									<span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
@@ -228,10 +229,6 @@
 			if (event.target == modal2) modal2.style.display = "none";
 			if (event.target == modal3) modal3.style.display = "none";
 		}
-		function switchSend(){
-			var saveTmp = document.getElementById("input").value;
-			fswitch(saveTmp);
-		}
 		function convertSend(){
 			var toConv = document.getElementById("input").value;
 			if (toConv == null || toConv.replace(/\s/g,'') == '') modal1.style.display = "block";
@@ -241,12 +238,19 @@
 	<script type="text/javascript">
 		$(function() {
 			$('#switch').click(function() {
+				var inBak  = document.getElementById("input").value,
+				    outBak = document.getElementById("output").value;
+				document.getElementById("input").value = ' ';
+				document.getElementById("output").value = ' ';
 				$('#switch1').animate({left:$("#switch2").offset().left}); 
 				//$('#info1').animate({left:$("#info2").offset().left});
 				$('#switch2').animate({right:$("#switch2").offset().left}, function() {
 					//$('#info2').animate({right:$("#info2").offset().left}, function() {
 					$('#switch1').animate({left:$("#switch2").offset().left}); 
-					$('#switch2').animate({right:$("#switch2").offset().left});
+					$('#switch2').animate({right:$("#switch2").offset().left}, function() {
+						document.getElementById("input").value = inBak;
+						document.getElementById("output").value = outBak;
+					});
 				});  
 			});
 		});
