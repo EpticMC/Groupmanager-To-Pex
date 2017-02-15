@@ -45,10 +45,26 @@ function fswitch(tmp){
 }
 function fconvert(text){
 	try {
-		obj = YAML.parse(text);
 		document.getElementById('output').value = "Parsing...";
+		obj = YAML.parse(text);
+		document.getElementById('output').value += "\nOK!";
 	} 
 	catch (e) {
-		document.getElementById('output').value = "Error.";
+		document.getElementById('output').value += "\nError. The YAML Syntax of the code is invalid!" +
+		"\n\nTo fix that, use a tool like:\nhttp://codebeautify.org/yaml-validator";
 	}
+}
+function selIn(){
+	document.getElementById('input').select().focus();
+}
+function selOut(){
+	document.getElementById('output').select().focus();
+}
+function copIn(){
+	$("#input").select();
+    document.execCommand('copy');
+}
+unction copOut(){
+	$("#output").select();
+    document.execCommand('copy');
 }
