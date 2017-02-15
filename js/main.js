@@ -62,9 +62,15 @@ function selOut(){
 }
 function copIn(){
 	$("#input").select();
-	document.execCommand('copy');
+    document.execCommand('copy');
 }
-unction copOut(){
+function copOut(){
 	$("#output").select();
-    	document.execCommand('copy');
+    document.execCommand('copy');
+}
+function clearIn(){
+	document.getElementById('input').value = "";
+}
+function clearOut(){
+	document.getElementById('output').value = "";
 }
