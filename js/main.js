@@ -44,5 +44,11 @@ function fswitch(tmp){
 	return gm2pex;
 }
 function fconvert(text){
-	console.log(text);
+	try {
+		obj = YAML.parse(text);
+		document.getElementById('output').value = "Parsing...";
+	} 
+	catch (e) {
+		document.getElementById('output').value = "Error.";
+	}
 }
