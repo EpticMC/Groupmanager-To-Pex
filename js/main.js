@@ -48,6 +48,12 @@ function fconvert(text){
 		document.getElementById('output').value = "Parsing...";
 		obj = YAML.parse(text);
 		document.getElementById('output').value += "\nOK!";
+		if(gm2pex == true){
+			document.getElementById('output').value += "\nConverting from GroupManager to Pex...";
+		}
+		if (gm2pex == false){
+			document.getElementById('output').value += "\nConverting from Pex to Groupmanager...";
+		}
 	} 
 	catch (e) {
 		document.getElementById('output').value += "\nError. The YAML Syntax of the code is invalid!" +
