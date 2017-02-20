@@ -53,7 +53,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<span class="close">&times;</span>
-					<h2 style="line-height: 50px !important;">
+					<h2 style="line-height:50px !important;">
 						<span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
 						&nbsp;&nbsp;Error...&nbsp;&nbsp;
 						<span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
@@ -75,7 +75,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<span id="close2" class="close">&times;</span>
-					<h2 style="line-height: 50px !important;">
+					<h2 style="line-height:50px !important;">
 						<span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
 						&nbsp;&nbsp;Warning...&nbsp;&nbsp;
 						<span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
@@ -98,9 +98,9 @@
 				<div class="modal-header">
 					<span id="close3" class="close">&times;</span>
 					<h2 style="line-height: 50px !important;">
-						<span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-menu-right" style="font-size:0.8em;" aria-hidden="true"></span>
 						&nbsp;&nbsp;Error...&nbsp;&nbsp;
-						<span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-menu-left"  style="font-size:0.8em;" aria-hidden="true"></span>
 						<br>
 					</h2>
 				</div>
@@ -120,10 +120,10 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<span id="close1" class="close">&times;</span>
-					<h2 style="line-height: 50px !important;">
-						<span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
+					<h2 style="line-height:50px !important;">
+						<span class="glyphicon glyphicon-menu-right" style="font-size:0.8em;" aria-hidden="true"></span>
 						&nbsp;&nbsp;Warning...&nbsp;&nbsp;
-						<span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-menu-left"  style="font-size:0.8em;" aria-hidden="true"></span>
 						<br>
 					</h2>
 				</div>
@@ -152,7 +152,7 @@
 				<div class="row">
 					<div class="col-md-5">
 						<div class="input">
-							<div style="position: relative;" id="info1">
+							<div style="position:relative;" id="info1">
 								<h4>GroupManager (<i>GM</i>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
 									<span title="./plugins/essentialsgroupmanager/groups.yml" 
 										  class="label label-info" 
@@ -160,9 +160,9 @@
 										groups.yml
 									</span>
 								</h4>
-								<hr style="border: 0; border-bottom: 1px dashed #ccc; background: #999;">
+								<hr style="border:0;border-bottom:1px dashed #ccc;background:#999;">
 							</div>
-							<div style="position: relative;" id="switch1">
+							<div style="position:relative;" id="switch1">
 								<textarea autocomplete="off" 
 										  autocorrect="off" 
 										  autocapitalize="off" 
@@ -172,25 +172,25 @@
 										  placeholder="Input"></textarea>
 							</div>
 						</div>
-						<input style="margin-top:10px;" id="selIn" type="button" value="Select Text" onclick="selIn();" class="btn btn-default">
-						<input style="margin-top:10px; margin-left:10px;" id="copIn" type="button" value="Copy To Clipboard" onclick="copIn();" class="btn btn-default">
-						<input style="margin-top:10px; margin-left:10px;" id="clearIn" type="button" value="Clear Input" onclick="clearIn();" class="btn btn-default">
+						<input style="margin-left:65px;margin-top:10px;" id="selIn" type="button" value="Select Text" onclick="selIn();" class="btn btn-default">
+						<input style="margin-top:10px;margin-left:10px;" id="copIn" type="button" value="Copy To Clipboard" onclick="copIn();" class="btn btn-default">
+						<input style="margin-top:10px;margin-left:10px;" id="clearIn" type="button" value="Clear Input" onclick="clearIn();" class="btn btn-default">
 					</div>
 					<div class="col-md-2">
 						<div id="middle-col">
-							<div style="position: relative; top: 50%; transform: translateY(-50%);">
+							<div style="position:relative;top:50%;transform:translateY(-50%);">
 								<br><br><br><br><br><br>
-								<hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
+								<hr style="height:12px;border:0;box-shadow:inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
 								<input id="convert" type="button" onclick="convertSend();" value="Convert" class="btn btn-default">
 								<br>
-								<h4 style="overflow: hidden; white-space: nowrap;">
+								<h4 style="overflow:hidden;white-space:nowrap;">
 									<span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
 									&nbsp;&nbsp;&nbsp;<p style="display:inline;" id="w-t-w">GM TO PEX</p>&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
 								</h4>
 								<p id="desc1">GroupManager to PermissionsEx</p>
 								<br>
-								<hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
+								<hr style="height:12px;border:0;box-shadow:inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
 								<input id="switch" type="button" value="Switch" onclick="fswitch();" class="btn btn-default">
 								<br>
 								<input type="checkbox" name="Lock" id="locktxt" value="Input" checked>&nbsp;
@@ -206,13 +206,13 @@
 								</h4>
 								<p id="s-t-f">Switch the fields to "PEX to GM"</p>
 								<br>
-								<hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
+								<hr style="height:12px;border:0;box-shadow:inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
 							</div>
 						</div>
 					</div>
 					<div class="col-md-5">
 						<div class="output">
-							<div style="position: relative;" id="info2">
+							<div style="position:relative;" id="info2">
 								<h4>PermissionsEx (<i>Pex</i>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
 									<span title="./plugins/permissionsex/permissions.yml" 
 										  class="label label-info" 
@@ -220,9 +220,9 @@
 										permissions.yml
 									</span>
 								</h4>
-								<hr style="border: 0; border-bottom: 1px dashed #ccc; background: #999;">
+								<hr style="border:0;border-bottom:1px dashed #ccc;background:#999;">
 							</div>
-							<div style="position: relative;" id="switch2">
+							<div style="position:relative;" id="switch2">
 								<textarea id="output" placeholder="Output" readonly></textarea>
 							</div>
 						</div>
@@ -256,6 +256,7 @@
 		$(function() {
 			$("#input").linedtextarea();
 			$('#switch').click(function() {
+				//NEED TO FIX TIMEOUT HERE
 				var inBak  = document.getElementById("input").value, outBak = document.getElementById("output").value;
 				var linesdiv = document.getElementsByClassName("lines")[0];
 				linesdiv.style.display = "none";
