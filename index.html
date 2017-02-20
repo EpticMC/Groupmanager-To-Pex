@@ -22,6 +22,7 @@
 		<script src="js/yaml.min.js"></script>
 		<script src="js/jquery-1.10.1.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/lines.js"></script>
 	</head>
 	<body onload="init();">
 		<a target ="_blank" href="http://github.com/NLDev/Groupmanager-To-Pex" class="github-corner" aria-label="View source on Github">
@@ -253,14 +254,18 @@
 			if (event.target == modal4) modal4.style.display = "none";
 		}
 		$(function() {
+			$("#input").linedtextarea();
 			$('#switch').click(function() {
 				var inBak  = document.getElementById("input").value, outBak = document.getElementById("output").value;
+				var linesdiv = document.getElementsByClassName("lines")[0];
+				linesdiv.style.display = "none";
 				document.getElementById("input").value = ' ';
 				document.getElementById("output").value = ' ';
 				$('#switch1').animate({left:$("#switch2").offset().left}); 
 				$('#switch2').animate({right:$("#switch2").offset().left}, function() {
 					$('#switch1').animate({left:$("#switch2").offset().left}); 
 					$('#switch2').animate({right:$("#switch2").offset().left}, function() {
+						linesdiv.style.display = "block";
 						if (document.getElementById('locktxt').checked == true){
 							document.getElementById("input").value = inBak;
 							document.getElementById("output").value = outBak;
