@@ -23,7 +23,7 @@
 		<script src="js/jquery-1.10.1.min.js"></script>
 		<script src="js/main.js"></script>
 	</head>
-	<body>
+	<body onload="init();">
 		<a target ="_blank" href="http://github.com/NLDev/Groupmanager-To-Pex" class="github-corner" aria-label="View source on Github">
 			<!-- ===-===============================================-=== -->
 			<!-- === GITHUB SVG THANKS TO tholman.com/github-corners === -->
@@ -192,6 +192,12 @@
 								<hr style="height: 12px; border: 0; box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
 								<input id="switch" type="button" value="Switch" onclick="fswitch();" class="btn btn-default">
 								<br>
+								<input type="checkbox" name="Lock" id="locktxt" value="Input" checked>&nbsp;
+								<div class="tooltip">Lock text in field
+  									<span class="tooltiptext">If this option is checked, the input- and output text will stay in the current field when "switch" is pressed.
+  									However if it is unchecked, the text will switch position aswell.</span>
+								</div>
+								<br>
 								<h4 style="overflow: hidden; white-space: nowrap;">
 									<span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
 									&nbsp;&nbsp;&nbsp;SWITCH&nbsp;&nbsp;&nbsp;
@@ -235,8 +241,6 @@
 		var modal1 = document.getElementById('warnempty'), modal2 = document.getElementById('warnmobil'), modal3 = document.getElementById('warnstart'),
 		    modal4 = document.getElementById('errsyntax'), span   = document.getElementsByClassName("close")[0], span1 = document.getElementById('close1'), 
 		    span2  = document.getElementById('close2'), span3 = document.getElementById('close3');
-		if(window.innerWidth <= 800 && window.innerHeight <= 600) modal2.style.display = "block";
-		else modal3.style.display = "block";
 		span.onclick  = function() { modal1.style.display = "none"; }
 		span1.onclick = function() { modal2.style.display = "none"; }
 		span2.onclick = function() { modal3.style.display = "none"; }
@@ -256,8 +260,14 @@
 				$('#switch2').animate({right:$("#switch2").offset().left}, function() {
 					$('#switch1').animate({left:$("#switch2").offset().left}); 
 					$('#switch2').animate({right:$("#switch2").offset().left}, function() {
-						document.getElementById("input").value = inBak;
-						document.getElementById("output").value = outBak;
+						if (document.getElementById('locktxt').checked == true){
+							document.getElementById("input").value = inBak;
+							document.getElementById("output").value = outBak;
+						}
+						if (document.getElementById('locktxt').checked == false){
+							document.getElementById("input").value = outBak;
+							document.getElementById("output").value = inBak;
+						}
 					});
 				});  
 			});
