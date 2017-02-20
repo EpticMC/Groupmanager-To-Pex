@@ -1,4 +1,8 @@
 var gm2pex = true;
+function init(){
+	if(window.innerWidth <= 800 && window.innerHeight <= 600) modal2.style.display = "block";
+	else modal3.style.display = "block";
+}
 function convertSend(){
 	var toConv = document.getElementById("input").value;
 	if (toConv == null || toConv.replace(/\s/g,'') == '') modal1.style.display = "block";
@@ -56,23 +60,29 @@ function fconvert(text){
 		document.getElementById('output').value += "\nOK!";
 		if(gm2pex == true){
 			document.getElementById('output').value += "\nConverting from GroupManager to Pex...";
+			convGmPex(text);
 		}
 		if (gm2pex == false){
 			document.getElementById('output').value += "\nConverting from Pex to Groupmanager...";
+			convPexGm(text);
 		}
 	} 
-	catch (e) {
+		catch (e) {
 		document.getElementById('output').value += "\nError. The YAML Syntax of the code is invalid!" +
 		"\n\nTo fix that, use a tool like:\nhttp://codebeautify.org/yaml-validator";
 		modal4.style.display = "block";
 	}
 }
-function selIn(){
-	document.getElementById('input').select().focus();
+function convGmPex(inGm){
+	return;
 }
-function selOut(){
-	document.getElementById('output').select().focus();
+function convPexGm(inPex){
+	return;
 }
+function selIn(){ document.getElementById('input').select().focus(); }
+function selOut(){ document.getElementById('output').select().focus(); }
+function clearIn(){ document.getElementById('input').value = ""; }
+function clearOut(){ document.getElementById('output').value = ""; }
 function copIn(){
 	$("#input").select();
     document.execCommand('copy');
@@ -80,10 +90,4 @@ function copIn(){
 function copOut(){
 	$("#output").select();
     document.execCommand('copy');
-}
-function clearIn(){
-	document.getElementById('input').value = "";
-}
-function clearOut(){
-	document.getElementById('output').value = "";
 }
