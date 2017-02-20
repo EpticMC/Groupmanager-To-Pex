@@ -221,6 +221,37 @@ fieldset[disabled]
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: -5px;
+    vertical-align: -2px;
+    padding: 15px 0 0;
+    margin-bottom: 2px;
+    border-bottom: 1px dotted black;
+    opacity: 1;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #FFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+#locktxt {
+	vertical-align: middle;
+  	position: relative;
+  	bottom: 1px;
+  	margin-top: 10px;
+  	transform: scale(1.1);
+}
 .close {
     color: black;
     float: right;
@@ -243,4 +274,28 @@ fieldset[disabled]
     padding: 2px 16px;
     background-color: #f44336;
     color: white;
+}
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms 
+	ease-in-out
+}
+@keyframes octocat-wave {
+	0%,100% {
+		transform:rotate(0)
+	}
+	20%,60% {
+		transform:rotate(-25deg)
+	}
+	40%,80% {
+		transform:rotate(10deg)
+	}
+}
+@media (max-width:500px) {
+	.github-corner:hover 
+	.octo-arm {
+		animation:none
+	}
+	.github-corner .octo-arm {
+		animation:octocat-wave 560ms ease-in-out
+	}
 }
