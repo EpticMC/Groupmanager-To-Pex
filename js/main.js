@@ -64,6 +64,7 @@ function fconvert(text){
 	catch (e) {
 		document.getElementById('output').value += "\nError. The YAML Syntax of the code is invalid!" +
 		"\n\nTo fix that, use a tool like:\nhttp://codebeautify.org/yaml-validator";
+		modal4.style.display = "block";
 	}
 }
 function selIn(){
