@@ -92,6 +92,29 @@
 				</div>
 			</div>
 		</div>
+		<div id="errsyntax" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span id="close3" class="close">&times;</span>
+					<h2 style="line-height: 50px !important;">
+						<span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
+						&nbsp;&nbsp;Error...&nbsp;&nbsp;
+						<span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
+						<br>
+					</h2>
+				</div>
+				<div class="modal-body">
+					<br>
+					<p>It seems like the entered code is invalid! All config files are in <i>.yml</i> (YAML) format.</p>
+					<p>Please make sure your YAML code is valid. To check it you can use
+					<a href="http://codebeautify.org/yaml-validator" target="_blank"><u>this YAML validator</u></a>.</p>
+					<br>
+				</div>
+				<div class="modal-footer">
+					<h3>NullDev</h3>
+				</div>
+			</div>
+		</div>
 		<div id="warnmobil" class="modal">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -106,7 +129,9 @@
 				<div class="modal-body">
 					<br>
 					<p>This site is not made, nor</p>
-					<p>optimized for Mobile Devices! </p>
+					<p>optimized for Mobile Devices!</p>
+					<p>It will most likely not work.</p>
+					<p>Who edits Config files on the phone anyway...</p>
 					<br>
 				</div>
 				<div class="modal-footer">
@@ -208,16 +233,19 @@
 	</body>
 	<script type="text/javascript">
 		var modal1 = document.getElementById('warnempty'), modal2 = document.getElementById('warnmobil'), modal3 = document.getElementById('warnstart'),
-		    span   = document.getElementsByClassName("close")[0], span1 = document.getElementById('close1'), span2 = document.getElementById('close2');
+		    modal4 = document.getElementById('errsyntax'), span   = document.getElementsByClassName("close")[0], span1 = document.getElementById('close1'), 
+		    span2  = document.getElementById('close2'), span3 = document.getElementById('close3');
 		if(window.innerWidth <= 800 && window.innerHeight <= 600) modal2.style.display = "block";
 		else modal3.style.display = "block";
 		span.onclick  = function() { modal1.style.display = "none"; }
 		span1.onclick = function() { modal2.style.display = "none"; }
 		span2.onclick = function() { modal3.style.display = "none"; }
+		span3.onclick = function() { modal4.style.display = "none"; }
 		window.onclick = function(event) {
 			if (event.target == modal1) modal1.style.display = "none";
 			if (event.target == modal2) modal2.style.display = "none";
 			if (event.target == modal3) modal3.style.display = "none";
+			if (event.target == modal4) modal4.style.display = "none";
 		}
 		$(function() {
 			$('#switch').click(function() {
