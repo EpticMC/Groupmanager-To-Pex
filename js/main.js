@@ -6,7 +6,13 @@ function init(){
 function convertSend(){
 	var toConv = document.getElementById("input").value;
 	if (toConv == null || toConv.replace(/\s/g,'') == '') modal1.style.display = "block";
-	else fconvert(toConv);
+	else {
+		var _txt = $("#input").val(), _line = _txt.split("\n"), _count = _line.length;
+		console.log(_count);
+		if (_count > 1)  document.getElementById('processed').innerHTML = _count + " Lines Processed.";
+		if (_count == 1) document.getElementById('processed').innerHTML = _count + " Line Processed.";
+		fconvert(toConv);
+	}
 }
 function fswitch(){
 	div1  = $('#info1');
@@ -14,7 +20,6 @@ function fswitch(){
 	cdiv1 = div1.clone();
 	cdiv2 = div2.clone();
 	gm2pex = !gm2pex;
-
 	if (gm2pex == true){
 		//document.getElementById('s-t-f').innerHTML = "Switch the fields to \"PEX to GM\"";
 		//document.getElementById('w-t-w').innerHTML = "GM TO PEX";
@@ -81,8 +86,11 @@ function convPexGm(inPex){
 }
 function selIn(){ document.getElementById('input').select().focus(); }
 function selOut(){ document.getElementById('output').select().focus(); }
-function clearIn(){ document.getElementById('input').value = ""; }
 function clearOut(){ document.getElementById('output').value = ""; }
+function clearIn(){ 
+	document.getElementById('input').value = "";
+	document.getElementById('processed').innerHTML = 0 + " Lines Processed.";
+}
 function copIn(){
 	$("#input").select();
     document.execCommand('copy');
