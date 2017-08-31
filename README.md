@@ -3,7 +3,7 @@ This tool is able to convert <a href="http://wiki.mc-ess.net/wiki/Group_Manager"
 <br>
 
 **Live-Demo:**<br>
-<a href="https://nldev.github.io/Groupmanager-To-Pex/">https://nldev.github.io/Groupmanager-To-Pex/</a>
+https://epticmc.github.io/Groupmanager-To-Pex/
 <br><br>
 Note that the finished project will be hosted on <a href="https://nulldev.org">NullDev.org</a>
 <br>
