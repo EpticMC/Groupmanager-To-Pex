@@ -71,28 +71,6 @@
 				</div>
 			</div>
 		</div>
-		<div id="warnstart" class="modal">
-			<div class="modal-content">
-				<div class="modal-header">
-					<span id="close2" class="close">&times;</span>
-					<h2 style="line-height:50px !important;">
-						<span class="glyphicon glyphicon-menu-right" style="font-size: 0.8em;" aria-hidden="true"></span>
-						&nbsp;&nbsp;Warning...&nbsp;&nbsp;
-						<span class="glyphicon glyphicon-menu-left"  style="font-size: 0.8em;" aria-hidden="true"></span>
-						<br>
-					</h2>
-				</div>
-				<div class="modal-body">
-					<br>
-					<p>This is still in development and</p>
-					<p>does not provide all or any features yet!</p>
-					<br>
-				</div>
-				<div class="modal-footer">
-					<h3>NullDev</h3>
-				</div>
-			</div>
-		</div>
 		<div id="errsyntax" class="modal">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -240,17 +218,15 @@
 		</div>
 	</body>
 	<script type="text/javascript">
-		var modal1 = document.getElementById('warnempty'), modal2 = document.getElementById('warnmobil'), modal3 = document.getElementById('warnstart'),
+		var modal1 = document.getElementById('warnempty'), modal2 = document.getElementById('warnmobil'), 
 		    modal4 = document.getElementById('errsyntax'), span   = document.getElementsByClassName("close")[0], span1 = document.getElementById('close1'), 
-		    span2  = document.getElementById('close2'), span3 = document.getElementById('close3');
+		    span3 = document.getElementById('close3');
 		span.onclick  = function() { modal1.style.display = "none"; }
 		span1.onclick = function() { modal2.style.display = "none"; }
-		span2.onclick = function() { modal3.style.display = "none"; }
 		span3.onclick = function() { modal4.style.display = "none"; }
 		window.onclick = function(event) {
 			if (event.target == modal1) modal1.style.display = "none";
 			if (event.target == modal2) modal2.style.display = "none";
-			if (event.target == modal3) modal3.style.display = "none";
 			if (event.target == modal4) modal4.style.display = "none";
 		}
 		$(function() {
