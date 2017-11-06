@@ -18,14 +18,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="icon" href="https://nulldev.org/img/favicon.png" type="image/png"/>
-		<link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
 		<script src="js/yaml.min.js"></script>
 		<script src="js/jquery-1.10.1.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/lines.js"></script>
 	</head>
 	<body onload="init();">
-		<a target ="_blank" href="http://github.com/EpticMC/Groupmanager-To-Pex" class="github-corner" aria-label="View source on Github">
+		<a target ="_blank" href="http://github.com/EpticMC/Groupmanager-To-Pex" class="github-cornr" aria-label="View source on Github">
 			<!-- ===-===============================================-=== -->
 			<!-- === GITHUB SVG THANKS TO tholman.com/github-corners === -->
 			<!-- ===-===============================================-=== -->
@@ -122,7 +121,7 @@
 			<br><h1 style="color:#FFFFFF;" id="title-l">Groupmanager to Pex Converter</h1><br>
 		</div>
 		<div id="body">
-			<h1>Permissions Converter</h1>
+			<h2>Permissions Converter</h2>
 			<div class="description">
 				This tool will convert Groupmanager Permission Configs to Pex Permission Configs and reverse.
 			</div>
@@ -153,6 +152,7 @@
 						<input style="margin-left:65px;margin-top:10px;" id="selIn" type="button" value="Select Text" onclick="selIn();" class="btn btn-default">
 						<input style="margin-top:10px;margin-left:10px;" id="copIn" type="button" value="Copy To Clipboard" onclick="copIn();" class="btn btn-default">
 						<input style="margin-top:10px;margin-left:10px;" id="clearIn" type="button" value="Clear Input" onclick="clearIn();" class="btn btn-default">
+						<div id="processed">0 Lines Processed.</div>
 					</div>
 					<div class="col-md-2">
 						<div id="middle-col">
@@ -207,7 +207,6 @@
 						<input style="margin-top:10px;" id="selOut" type="button" value="Select Text" onclick="selOut();" class="btn btn-default">
 						<input style="margin-top:10px;margin-left:10px;" id="copOut" type="button" value="Copy To Clipboard" onclick="copOut();" class="btn btn-default">
 						<input style="margin-top:10px;margin-left:10px;" id="clearOut" type="button" value="Clear Output" onclick="clearOut();" class="btn btn-default">
-						<div   style="margin-top:10px;margin-left:10px;display:inline;position:relative;top:6px;" id="processed">0 Lines Processed.</div>
 					</div>
 				</div>
 			</div>
