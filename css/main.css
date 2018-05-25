@@ -181,6 +181,11 @@ a:hover { color:                #4183C4; }
     transform:                  translateY(-50%);
 }
 
+.mid-col-wrap h4 {
+    overflow:                   hidden;
+    white-space:                nowrap;
+}
+
 .btm-hr {
     border:                     0;
     border-bottom:              1px dashed #CCC;
@@ -344,6 +349,37 @@ fieldset[disabled] .btn-default.active, .btn-default.disabled,        .btn-defau
     background-color:           #333;
 }
 
+/* Customs */
+
+.label-cus {
+    background-color:           #64CEAA;
+    display:                    inline !important;
+}
+
+#w-t-w { display:               inline; }
+
+#selIn {
+    margin-left:                65px;
+    margin-top:                 10px;
+}
+
+#selOut { margin-top:           10px; }
+
+#copIn, 
+#copOut, 
+#clearIn, 
+#clearOut {
+    margin-top:                 10px;
+    margin-left:                10px;
+}
+
+#switch1, 
+#switch2,
+#info1, 
+#info2 { position:              relative; }
+
+/***********/
+
 /* * * * * */
 /* FOOTERS */
 /* * * * * */
@@ -356,6 +392,12 @@ fieldset[disabled] .btn-default.active, .btn-default.disabled,        .btn-defau
     line-height:                1.5;
     color:                      #777;
     text-align:                 center;
+}
+
+#footer hr {
+    border:                     0; 
+    height:                     1px; 
+    background-image:           linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 /* * * * * * * */

@@ -161,17 +161,15 @@
 				<div class="row">
 					<div class="col-md-5">
 						<div class="input">
-							<div style="position:relative;" id="info1">
+							<div id="info1">
 								<h4>GroupManager (<i>GM</i>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
-									<span title="./plugins/essentialsgroupmanager/groups.yml" 
-										  class="label label-info" 
-										  style="background-color:#64CEAA;display:inline !important;">
+									<span title="./plugins/essentialsgroupmanager/groups.yml" class="label label-info label-cus">
 										groups.yml
 									</span>
 								</h4>
 								<hr class="btm-hr">
 							</div>
-							<div style="position:relative;" id="switch1">
+							<div id="switch1">
 								<textarea autocomplete="off" 
 										  autocorrect="off" 
 										  autocapitalize="off" 
@@ -181,9 +179,9 @@
 										  placeholder="Input"></textarea>
 							</div>
 						</div>
-						<input style="margin-left:65px;margin-top:10px;" id="selIn" type="button" value="Select Text" onclick="selIn();" class="btn btn-default">
-						<input style="margin-top:10px;margin-left:10px;" id="copIn" type="button" value="Copy To Clipboard" onclick="copIn();" class="btn btn-default">
-						<input style="margin-top:10px;margin-left:10px;" id="clearIn" type="button" value="Clear Input" onclick="clearIn();" class="btn btn-default">
+						<input id="selIn" type="button" value="Select Text" onclick="selIn();" class="btn btn-default">
+						<input id="copIn" type="button" value="Copy To Clipboard" onclick="copIn();" class="btn btn-default">
+						<input id="clearIn" type="button" value="Clear Input" onclick="clearIn();" class="btn btn-default">
 						<div id="processed">0 Lines Processed.</div>
 					</div>
 					<div class="col-md-2">
@@ -193,9 +191,9 @@
 								<hr class="mid-hr">
 								<input id="convert" type="button" onclick="convertSend();" value="Convert" class="btn btn-default">
 								<br>
-								<h4 style="overflow:hidden;white-space:nowrap;">
+								<h4>
 									<span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
-									&nbsp;&nbsp;&nbsp;<p style="display:inline;" id="w-t-w">GM TO PEX</p>&nbsp;&nbsp;&nbsp;
+									&nbsp;&nbsp;&nbsp;<p id="w-t-w">GM TO PEX</p>&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
 								</h4>
 								<p id="desc1">GroupManager to PermissionsEx</p>
@@ -209,7 +207,7 @@
   									However if it is unchecked, the text will switch position as well.</span>
 								</div>
 								<br>
-								<h4 style="overflow: hidden; white-space: nowrap;">
+								<h4>
 									<span class="glyphicon glyphicon-backward" aria-hidden="true"></span>	
 									&nbsp;&nbsp;&nbsp;SWITCH&nbsp;&nbsp;&nbsp;
 									<span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
@@ -222,29 +220,27 @@
 					</div>
 					<div class="col-md-5">
 						<div class="output">
-							<div style="position:relative;" id="info2">
+							<div id="info2">
 								<h4>PermissionsEx (<i>Pex</i>&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
-									<span title="./plugins/permissionsex/permissions.yml" 
-										  class="label label-info" 
-										  style="background-color:#64CEAA;display:inline !important;">
+									<span title="./plugins/permissionsex/permissions.yml" class="label label-info label-cus">
 										permissions.yml
 									</span>
 								</h4>
 								<hr class="btm-hr">
 							</div>
-							<div style="position:relative;" id="switch2">
+							<div id="switch2">
 								<textarea id="output" placeholder="Output" readonly></textarea>
 							</div>
 						</div>
-						<input style="margin-top:10px;" id="selOut" type="button" value="Select Text" onclick="selOut();" class="btn btn-default">
-						<input style="margin-top:10px;margin-left:10px;" id="copOut" type="button" value="Copy To Clipboard" onclick="copOut();" class="btn btn-default">
-						<input style="margin-top:10px;margin-left:10px;" id="clearOut" type="button" value="Clear Output" onclick="clearOut();" class="btn btn-default">
+						<input id="selOut" type="button" value="Select Text" onclick="selOut();" class="btn btn-default">
+						<input id="copOut" type="button" value="Copy To Clipboard" onclick="copOut();" class="btn btn-default">
+						<input id="clearOut" type="button" value="Clear Output" onclick="clearOut();" class="btn btn-default">
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="footer">
-			<hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+			<hr>
 			Copyright &copy; 2017 <a href="https://nulldev.org" target="_blank">NullDev.org</a> &amp; <a href="https://epticmc.com" target="_blank">EpticMC.com</a>
 		</div>
 	</body>
